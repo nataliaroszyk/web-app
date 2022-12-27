@@ -1,3 +1,5 @@
+I decided to keep track of the files and there locations here.
+
 For now there are 2 jupyter files: 
 - **create_db** creates the database yoga.db and all the tables 
 - **app** is the main file which runs the app 
