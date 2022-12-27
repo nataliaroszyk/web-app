@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Register in Yoga Lab{% endblock %} 
+{% block content %}
+
+
+<div class="container">
+  <form action="http://localhost:5000/register" method="post">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="name" class="form-control" id="name" name="name"  ria-describedby="emailHelp" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="surname">Surname</label>
+      <input type="surname" class="form-control" id="surname" name="surname"  aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="year_of_birth">Year od birth</label>
+      <input type="birthdate" class="form-control" id="year_of_birth" name="year_of_birth" aria-describedby="emailHelp" placeholder="Enter year of birth">
+    </div>
+    <div class="form-group">
+      <label for="select_membership">Select membership type</label>
+      <select class="form-control" name="membership" id="select_membership"> 
+        <option>Multisport</option>
+        <option>4xWeek</option>
+        <option>8xMonth</option>
+        <option>Unlimited</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    </div>
+    
+    <button type="register" class="btn btn-primary">Register</button>
+  </form>
+</div>
+
+{% endblock %}
+</html>
