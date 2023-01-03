@@ -70,10 +70,11 @@
           </div>
           </nav>
 
-
+          
 
         <div class="container mt-3 py-5">
-            <h2>Our membership plans</h2>  
+          <p><h3>Your membership plan is {{ plan[0] }}</h3></p>
+            <h3>Our membership plans</h3>  
             <br>          
             <table class="table table-hover">
               <thead>
@@ -106,9 +107,9 @@
                   </tr>
               </tbody>
             </table>
-            <p>You may update your plan in 1 click, use the button below.</p>
     
-
+    
+           
             <div class="container">
                 <form action="/profile" method="post">
                     <div class="form-group">
@@ -121,19 +122,45 @@
                         </select>
                       </div>
                       <br>
-                      <button type="button" class="btn btn-outline-dark">Update</button>
+                      <button type="submit" class="btn btn-outline-dark">Update</button>
                 </form>
             </div>
 
 
             <div class="container mt-3 py-4">
-                <h2>Active reservations</h2>
+                <h3>Your reservations</h3>
             </div>
 
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Reservation ID</th>
+                  <th scope="col">Class date</th>
+                  <th scope="col">Class name</th>
+                  <th scope="col">Instructor</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for reservation in reservation_data %}
+                <tr>
+                  <th scope="row">{{ reservation[1] }}</th> <!--reservation.id-->
+                  <td>{{ reservation[2] }}</td> <!--reservation.classDate-->
+                  <td>{{ reservation[3] }}</td> <!--reservation.className-->
+                  <td>{{ reservation[4] }} {{ reservation[5] }}</td> <!--reservation.instructorFirstname reservation.instructorLastname-->
+                  <td>{{ reservation[6] }}</td> <!--reservation.status-->
+                  <form action="/profile" method="post">
+                  <input type="hidden" value="{{ reservation[1] }}" name="id_reservation" id="{{ reservation[1] }}">
+                  <td>
+                    <button type="submit" name="unregister" value="{{ reservation[1] }}" 
+                    class="btn btn-primary">Unregister</button>
+                  </td>
+                  </form>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
 
-            <div class="container mt-3 py-4">
-                <h2>Past reservations</h2>
-            </div>
     </body>
  
 </html>
