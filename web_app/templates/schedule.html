@@ -61,7 +61,7 @@
 
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    Workout history
+                    Statistic
                   </a>
                 </li>
 
@@ -73,8 +73,9 @@
       <table id="data" class="table table-striped">
     <thead>
       <tr>
+        <th scope = "col">ID</th>
         <th scope = "col">Class name</th>
-        <th scope = "col">Date/ Time</th>
+        <th scope = "col">When?</th>
         <th scope = "col">Instructor name</th>
         <th scope = "col">Place limit</th>
         <th scope = "col">Slots available</th>
@@ -83,12 +84,13 @@
     <tbody>
         {% for schedule in schedule_info %}
         <tr>
-           <th scope="row">{{ schedule[0] }}</th> 
+           <td>{{ schedule[0] }}</td> 
                   <td>{{ schedule[1] }}</td> 
                   <td>{{ schedule[2] }}</td> 
                   <td>{{ schedule[3] }}</td> 
                   <td>{{ schedule[4] }}</td> 
                   <td>{{ schedule[5] }}</td>
+
                   <form action="/schedule" method="post">
                   <input type="hidden" value="{{ schedule[0] }}" name="class_key" id="{{ schedule[0] }}">
                   <td>
@@ -96,7 +98,7 @@
                     class="btn btn-primary">Sign up</button>
                   </td>
                   </form>
-                </tr>
+                  </tr>
                 {% endfor %}
             </tbody>
          </table>

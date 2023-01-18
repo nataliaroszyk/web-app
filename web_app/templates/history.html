@@ -61,7 +61,7 @@
 
                 <li class="nav-item active">
                   <a class="nav-link active" href="/web_app/templates/history.html">
-                    Workout history
+                    Statistic
                   </a>
                 </li>
 
@@ -69,26 +69,12 @@
             </div>
           </div>
           </nav>
-    
-      <table id="data" class="table table-striped">
-    <thead>
-      <tr>
-        <th scope = "col">Date/ Time</th>
-        <th scope = "col">Class name</th>
-        <th scope = "col">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for every in history_info %}
-        <tr>
-                  <td>{{ every[0] }}</td> 
-                  <td>{{ every[1] }}</td> 
-                  <td>{{ every[2] }}</td> 
-                </tr>
-                {% endfor %}
-            </tbody>
-         </table>
+<section>
+        <div class = "container text-center mt-3">
+        <p>Check out which classes are the most popular this week!</p>
 
-    </body>
- 
+              <img src="data:image/png;base64, {{ plot_url }}"/>
+    </div>
+    </section>
+</body>
 </html>
