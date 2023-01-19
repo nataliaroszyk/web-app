@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yoga Studio Bookings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+<body style="height: 200px;">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        
+    <nav class="navbar  navbar-expand-sm navbar-light" style="background-color: rgb(167, 230, 209);">
+      <div class="container">
+            <a 
+            class="navbar-brand mb-0 h1" 
+            href="#">YOGA studio 
+          </a>
+          <button 
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          class="navbar-toggler"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <div 
+            class="collapse navbar-collapse" 
+            id="navbarNav">
+              
+            <ul class="navbar-nav">
+                
+              <li class="nav-item">
+                  <a class="nav-link" href="/profile">
+                  My profile
+                  </a>
+                </li>
+
+                <li class="nav-item active">
+                  <a class="nav-link active" href="/classes">
+                    Classes
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/instructors">
+                    Instructors
+                  </a>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/schedule">
+                    Schedule
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/history">
+                    Statistics
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <span class="nav-item">
+            <a class="btn" href="/logout">Log out</a>
+          </span>
+          </nav>
+
+<h2 class="container text-center mt-5">Below you may introduce yourself to the classes we offer.</h2>
+          <div class="container text-center mt-5">
+            <br>
+            <img src="{{url_for('static', filename='photo1.jpg')}}" class="rounded-circle" width="600" height="400">
+            <br>
+            <br>
+            <div class="container">
+       
+                <h3>Yoga for beginners</h3>
+                <p>It’s time to roll out your yoga mat and discover the combination of physical and mental exercises that for thousands of years have hooked yoga practitioners around the globe. The beauty of yoga is that you don’t have to be a yogi or yogini to reap the benefits. Whether you are young or old, overweight or fit, yoga has the power to calm the mind and strengthen the body. Don’t be intimidated by yoga terminology, fancy yoga studios and complicated poses. Yoga is for everyone.</p>
+      
+          
+                  <h3>Kundalini Yoga</h3>
+                  <p>The term “Kundalini” comes from the Sanskrit word “kundal,” which means “circular.” It also refers to a coiled snake. And according to practitioners, Kundalini energy is like that coiled snake: It sits at the base of your spine, sleeping and unaroused.
+ 
+                     Kundalini yoga is practiced to activate this energy, which allows it to move up and through the chakras along your spine.</p>
+
+                      <h3>Stretching</h3>
+                      <p>Stretching keeps the muscles flexible, strong, and healthy, and we need that flexibility to maintain a range of motion in the joints. Without it, the muscles shorten and become tight. Then, when you call on the muscles for activity, they are weak and unable to extend all the way. That puts you at risk for joint pain, strains, and muscle damage.</p>
+                    </div>
+          </div>
